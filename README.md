@@ -29,13 +29,13 @@ cp /home/ftp/anaconda3/anaconda.sh .
 bash anaconda.sh
 ```
 accept the licence terms 
-confirm in /home/<user>/anaconda3 
+confirm in /home/[user]/anaconda3 
 
 Type YES and press Enter to have Anaconda initialize automatically at startup or type NO if you know what you are doing and if you prefer to activate it manually later.
 
 ### Step 2: Initialize Anaconda
 If you had installed using the interactive mode and had entered NO to auto-initialization, to initialize Anaconda, run:
-source /home/"<user>"/anaconda3/bin/activate
+source /home/[user]/anaconda3/bin/activate
 
 After activating, run the following to add the shell functions:
 
