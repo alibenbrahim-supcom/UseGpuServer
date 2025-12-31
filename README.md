@@ -35,7 +35,7 @@ Type YES and press Enter to have Anaconda initialize automatically at startup or
 
 ### Step 2: Initialize Anaconda
 If you had installed using the interactive mode and had entered NO to auto-initialization, to initialize Anaconda, run:
-source /home/<user>/anaconda3/bin/activate
+source /home/"<user>"/anaconda3/bin/activate
 
 After activating, run the following to add the shell functions:
 
