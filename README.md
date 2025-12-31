@@ -7,4 +7,9 @@ This readme will show you how to install and run ollama, python, pytorch in your
 Also inform you all models and applications installed for you 
 
 # Install and Use pytorch
-## install Anaconda
+several methods exists to install **pytorch**  
+we show here one method works and tested .  
+
+## Install Anaconda
+
+
