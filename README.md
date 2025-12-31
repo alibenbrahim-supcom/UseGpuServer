@@ -11,7 +11,8 @@ several methods exists to install **pytorch**
 we show here one method works and tested .  
 
 ## Install Anaconda
-
+Anaconda is a popular open-source platform and distribution for Python, simplifying data science, machine learning, and AI by bundling essential tools like the conda package manager, Jupyter Notebooks, and hundreds of pre-installed libraries, making it easy to manage environments, install packages, and deploy projects
+installation:
 be shure you are in your root directory and create a tmp folder
 
 ```
@@ -42,6 +43,24 @@ After activating, run the following to add the shell functions:
 ```
 conda init
 ```
+With the installation and activation complete, the base environment will automatically activate each time you open a new terminal. If you prefer not to have the base environment activated by default, you can disable this behavior by running:
+
+
+```
+conda config --set auto_activate_base False
+```
+After doing this, Conda won’t automatically activate the base environment when you open a new terminal. To use Conda, you’ll need to manually activate an environment by running 
+
+```
+conda activate
+```
+
+### Step 3: Verify installation
+Verify the installation by checking its complete information using:
+```
+conda info
+```
+
 
 
 
