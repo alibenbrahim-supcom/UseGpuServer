@@ -12,17 +12,36 @@ we show here one method works and tested .
 
 ## Install Anaconda
 
-be shure you are in your root directory
+be shure you are in your root directory and create a tmp folder
 
 ```
 cd ~
+mkdir tmp
+cd tmp
 ```
 
 copy paste if you do not find the ~ on your keyboard
-Step 1: copy the Anaconda installer
-cp h
 
-Next, download the Anaconda installer script using wget. You can obtain the latest version of the script directly from the Anaconda website.
+### Step 1: copy the Anaconda installer and install
 
-First, navigate to the /tmp directory to keep your working directory clean:
+```
+cp /home/ftp/anaconda3/anaconda.sh .
+bash anaconda.sh
+```
+accept the licence terms 
+confirm in /home/<user>/anaconda3 
+
+Type YES and press Enter to have Anaconda initialize automatically at startup or type NO if you know what you are doing and if you prefer to activate it manually later.
+
+### Step 2: Initialize Anaconda
+If you had installed using the interactive mode and had entered NO to auto-initialization, to initialize Anaconda, run:
+source /home/<user>/anaconda3/bin/activate
+
+After activating, run the following to add the shell functions:
+
+```
+conda init
+```
+
+
 
