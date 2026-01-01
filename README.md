@@ -77,15 +77,22 @@ To apply the changes, exit your terminal session and open a new one.
 First ensure the access to NVIDIA Drivers with 
 nvidia-smi
 and check CUDA Driver 
-+-----------------------------------------------------------------------------------------+
-| NVIDIA-SMI 570.195.03             Driver Version: 570.195.03     CUDA Version: 12.8     |
-|-----------------------------------------+------------------------+----------------------+
-| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
-|                                         |                        |               MIG M. |
-|=========================================+========================+======================|
-|   0  NVIDIA A40                     On  |   00000000:0B:00.0 Off |                    0 |
-|  0%   29C    P8             21W /  300W |      10MiB /  46068MiB |      0%      Default |
++-----------------------------------------------------------------------------------------+ 
+| NVIDIA-SMI 570.195.03             Driver Version: 570.195.03     CUDA Version: 12.8     | 
+|-----------------------------------------+------------------------+----------------------+ 
+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC | 
+
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. | 
+
+|                                         |                        |               MIG M. | 
+
+|=========================================+========================+======================| 
+
+|   0  NVIDIA A40                     On  |   00000000:0B:00.0 Off |                    0 | 
+
+|  0%   29C    P8             21W /  300W |      10MiB /  46068MiB |      0%      Default | 
+
 |                                         |                        |                  N/A |
 +-----------------------------------------+------------------------+----------------------+                                                                                         
 +-----------------------------------------------------------------------------------------+
