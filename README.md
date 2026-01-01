@@ -61,6 +61,14 @@ Verify the installation by checking its complete information using:
 conda info
 ```
 
+### Uninstall Anaconda
 
+If for any reason you want to uninstall Anaconda, execute the following command:
+
+```
+rm -rf ~/anaconda3
+```
+
+To apply the changes, exit your terminal session and open a new one.
 
 
