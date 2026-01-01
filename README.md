@@ -61,7 +61,7 @@ Verify the installation by checking its complete information using:
 conda info
 ```
 
-### Uninstall Anaconda
+### Uninstall Anaconda
 
 If for any reason you want to uninstall Anaconda, execute the following command:
 
@@ -71,4 +71,56 @@ rm -rf ~/anaconda3
 
 To apply the changes, exit your terminal session and open a new one.
 
+
+## Install Pytorch over Anaconda
+
+First ensure the access to NVIDIA Drivers with 
+nvidia-smi
+and check CUDA Driver 
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.195.03             Driver Version: 570.195.03     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:0B:00.0 Off |                    0 |
+|  0%   29C    P8             21W /  300W |      10MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            1548      G   /usr/lib/xorg/Xorg                        4MiB |
++-----------------------------------------------------------------------------------------+
+
+The PyTorch binaries bundle the necessary CUDA runtime, so you don't need a separate system-wide CUDA toolkit installation, just the drivers.
+### Create a New Conda Environment
+Using a dedicated environment helps manage dependencies and avoid conflicts with other projects. Open your terminal or Anaconda Prompt and run:
+
+```
+conda create --name pytorch_env python=3.10
+conda activate pytorch_env
+```
+
+You can choose a different Python version, but check the PyTorch website for supported versions.
+
+Run the Installation Command
+
+```
+conda install pytorch torchvision torchaudio pytorch-cuda=12 -c pytorch -c nvidia
+```
+Running this command in your activated pytorch_env will install all the necessary packages and their CUDA dependencies.
+
+### Verify the Installation
+After the installation is complete, confirm that PyTorch can detect your GPU. Run the following commands within your Conda environment:
+
+```
+python -c "import torch; print(torch.__version__); print(torch.cuda.is_available()); print(torch.version.cuda)"
+
+```
+
+The output should display the PyTorch version, True for torch.cuda.is_available(), and the CUDA runtime version (e.g., 11.8 or 12.4). If torch.cuda.is_available() returns False, you may need to troubleshoot driver compatibility or re-run the install command to ensure all packages are correctly linked. 
 
